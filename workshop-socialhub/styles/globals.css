@@ -47,7 +47,7 @@
     grid-template-columns: 1fr;
     margin-bottom: 24px;
 }
-.post input {
+.textarea {
     width: 100%;
     padding: 12px;
     border-radius: 24px;
@@ -61,6 +61,11 @@
 }
 
 /* ------------Post-Card */
+.post-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
 .post-card {
     margin: 0 0 24px 0;
     border: 1px solid #638c74;
@@ -85,6 +90,63 @@
 }
 .action-btn {
     text-align: end;
+}
+
+/* ------------Message */
+.message-grid {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    gap: 24px;
+}
+.user {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+.user>div {
+    border-bottom: 1px solid #638c74;
+    padding-bottom: 8px;
+}
+.user>div:hover {
+    border-bottom: 1px solid #638c74;
+    padding-bottom: 8px;
+    background-color: #d8e9d2;
+}
+.chat {
+    border: 1px solid #638c74;
+    border-radius: 32px;
+    padding: 24px;
+    height: max-content;
+}
+.chat>input {
+    padding: 24px;
+}
+.chat button {
+    width: 172px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.otherchat {
+    text-align: start;
+    background-color: #e7e7e7;
+    border-radius: 16px;
+    padding: 8px 14px;
+    width: 65%;
+    margin-bottom: 24px;
+}
+.mychat {
+    display: block;
+    background-color: #1a4231;
+    color: white;
+    border-radius: 16px;
+    padding: 8px 14px;
+    width: 65%;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 /* ------------Navbar */

@@ -11,7 +11,7 @@ export default function Home() {
       <div className="container content">
           <h1 className="heading">Community</h1>
         <div className="post">
-          <input type="textarea" placeholder="Post your feeling."></input>
+          <input type="textarea" placeholder="Post your feeling." className="textarea"></input>
           <button className="btn" type="button">Post</button>
         </div>
         <PostList/>

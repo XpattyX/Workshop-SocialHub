@@ -4,10 +4,10 @@ function PostList() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.org/posts')
+    fetch('https://api.sampleapis.com/recipes/recipes')
       .then(response => response.json())
       .then(data => {
-        const firstTenPosts = data.slice(0, 10);
+        const firstTenPosts = data.slice(0, 15);
         setPosts(firstTenPosts);
       })
       .catch(error => {
@@ -16,12 +16,12 @@ function PostList() {
   }, []);
 
   return (
-    <div>
+    <div className="post-grid">
       {posts.map(post => (
         <div key={post.id} className="post-card">
         <h2 className="post-title">{post.title}</h2>
-        <p className="post-updatedAt">{post.updatedAt}</p>
-        <img className="post-img" src={post.image} width={500} height={300} alt={post.slug}></img>
+        <p className="post-updatedAt">{post.cuisine}</p>
+        <img className="post-img" src={post.photoUrl} width={300} height={200} alt={post.slug}></img>
         <div className="action-btn">
           <button className="btn" type="button">Like</button>
           <button className="btn" type="button">Comment</button>

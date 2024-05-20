@@ -1,4 +1,6 @@
 import Head from "next/head"
+import Usermessage from "@/components/Usermessage"
+import UserChat from "@/components/UserChat"
 
 export default function Message() {
   return (
@@ -9,6 +11,12 @@ export default function Message() {
         </Head>
         <div className="container content">
           <h1 className="heading">Message</h1>
+        <div className="message-grid">
+          <Usermessage/>
+          <UserChat/>
+        </div>
+          
+
         </div>
     </>
     
